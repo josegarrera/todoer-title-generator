@@ -8,11 +8,19 @@ const port = 3002;
 
 app.use(cors());
 
-app.get('/external-todos', async (req, res) => {
+app.get('/random-title', async (req, res) => {
   try {
+    // Hacemos una solicitud a la API externa para obtener todos
     const response = await axios.get('https://jsonplaceholder.typicode.com/todos');
-    res.json(response.data);
+    const todos = response.data;
+
+    // Seleccionamos un título de manera aleatoria
+    const randomTodo = todos[Math.floor(Math.random() * todos.length)];
+
+    // Devolvemos el título aleatorio
+    res.json({ title: randomTodo.title });
   } catch (error) {
+    logger.error('Error fetching random title:', error);
     res.status(500).json({ message: 'Error fetching external todos' });
   }
 });
