@@ -1,4 +1,4 @@
-name: External Integration Service CI
+name: External Service CI
 
 on:
   push:

@@ -1,3 +1,7 @@
+# External Service
+
+[![External Service CI](https://github.com/josegarrera/tdd-be2/actions/workflows/ci.yml/badge.svg)](https://github.com/josegarrera/tdd-be2/actions/workflows/ci.yml)
+
 ## Instructions
 * `nvm use`
 * `npm install`
