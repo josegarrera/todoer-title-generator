@@ -8,6 +8,10 @@ const port = 3002;
 
 app.use(cors());
 
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 app.get('/random-title', async (req, res) => {
   try {
     // Hacemos una solicitud a la API externa para obtener todos
