@@ -1,4 +1,4 @@
-name: Title Generator CI
+name: Commit
 
 on:
   push:
